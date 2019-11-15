@@ -12,7 +12,7 @@ pipeline {
         // Where your Nexus is running
         NEXUS_URL = "localhost:8084"
         // Repository where we will upload the artifact
-        NEXUS_REPOSITORY = "repository_mavenjenkins"
+        NEXUS_REPOSITORY = "repository_achref"
         // Jenkins credential id to authenticate to Nexus OSS
         NEXUS_CREDENTIAL_ID = "nexus-credentials"
     }
@@ -20,7 +20,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/nadejeT/mavenjenkins'
+                git 'https://github.com/AchrefElmansour/jenkinsmaven'
             }
         }
         stage('Build') {
